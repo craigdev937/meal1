@@ -16,7 +16,8 @@ export const Meals = () => {
             .then((data) => {
                 setItem(data.meals);
                 setShow(true);
-            }).catch((error) => console.log(error));
+            })
+            .catch((error) => console.log(error));
     }, [url]);
 
     const setIndex = (alpha: string) => {
@@ -24,7 +25,7 @@ export const Meals = () => {
     };
 
     const searchRecipe = 
-    (event: any) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
         setUrl(`${URL}?s=${search}`);
         setSearch(event.target.value);
     };
@@ -34,8 +35,7 @@ export const Meals = () => {
             <main className="main">
                 <section className="main__heading">
                     <h1>Good Meals</h1>
-                    <h4>Delicious food is just a click away.  
-                        Come see what we have...😋</h4>
+                    <h4>Come see what we have...😋</h4>
                 </section>
                 <section className="search">
                     <input 

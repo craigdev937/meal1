@@ -1,6 +1,96 @@
-body {
-    background-color: steelblue;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+:root {
+    --white: #fff;
+    --yellow: #fcde67;
+    --pink: #b26b97;
+    --blue: #4682b4;
+    --gray: #9f9f9f;
+    --purple: #4c358e;
+    --plum: #2a2249;
+    --black: #0f0926;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main__heading {
+    font-family: 'Peralta', cursive;
+    color: var(--white);
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    margin: 1rem;
+}
+
+.search__bar {
+    margin: 1rem 0;
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+.container {
+    width: 90%;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(150px, 1fr)
+    );
+    grid-gap: 2rem;
+}
+
+.card {
+    width: 200px;  /* Changed form 180px */
+    border-radius: 1rem;
+    background-color: #030e12;
+    padding: 5px;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__title {
+    color: var(--white);
+    font-size: 18px;
+}
+
+.indexContainer {
+    display: flex;
+    margin: 2.5rem 0;
+}
+
+.numBox {
+    width: 50px;
+    height: 40px;
+    background-color: #030e12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    margin: 0 5px 0 5px;
+}
 
 

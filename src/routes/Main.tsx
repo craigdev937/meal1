@@ -9,14 +9,12 @@ const ReactRouter = createBrowserRouter([
     {
         path: "/",
         element: <Meals />,
-        errorElement: <NotFound />,
-        children: [
-            {
-                path: "/:recipeId",
-                element: <Recipe />,
-                errorElement: <NotFound />
-            }
-        ]
+        errorElement: <NotFound />
+    },
+    {
+        path: "/:recipeId",
+        element: <Recipe />,
+        errorElement: <NotFound />
     }
 ]);
 
